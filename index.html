@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光模块领域投资机会深度研究报告</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ========== 任务说明横幅 ========== */
+  .task-banner {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1565c0 100%);
+    color: #fff;
+    padding: 28px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .task-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+  .task-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+  }
+  .task-banner-inner { position: relative; z-index: 1; }
+  .task-label {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .task-text {
+    font-size: 17px;
+    line-height: 1.8;
+    opacity: 0.95;
+    max-width: 900px;
+  }
+  .task-text strong { color: #ffd54f; }
+
+  /* ========== 报告头 ========== */
+  .report-header {
+    background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+    border-bottom: 1px solid #e8eaed;
+    padding: 36px 40px 30px;
+    text-align: center;
+  }
+  .report-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a237e;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .report-title-icon {
+    display: inline-block;
+    width: 48px;
+    height: 4px;
+    background: linear-gradient(90deg, #1a237e, #42a5f5, #1a237e);
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  .report-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #78909c;
+  }
+  .report-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .meta-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #42a5f5;
+  }
+
+  /* ========== 主内容容器 ========== */
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+  }
+
+  /* ========== 核心结论卡片（置顶高亮）========== */
+  .conclusion-card {
+    background: linear-gradient(135deg, #1a237e 0%, #263238 100%);
+    border-radius: 16px;
+    padding: 32px 36px;
+    color: #fff;
+    margin-bottom: 36px;
+    box-shadow: 0 8px 32px rgba(26,35,126,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  .conclusion-card::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 220px;
+    height: 220px;
+    border: 2px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .section-tag {
+    display: inline-block;
+    background: rgba(66,165,245,0.2);
+    color: #90caf9;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(66,165,245,0.2);
+  }
+  .conclusion-main {
+    font-size: 17px;
+    line-height: 1.9;
+    position: relative;
+    z-index: 1;
+  }
+  .conclusion-main strong {
+    color: #ffd54f;
+    font-weight: 600;
+  }
+  .conclusion-list {
+    list-style: none;
+    margin-top: 18px;
+    padding: 0;
+  }
+  .conclusion-list li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    font-size: 15px;
+    opacity: 0.92;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .conclusion-list li:last-child { border-bottom: none; }
+  .conclusion-list li::before {
+    content: attr(data-num);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    border-radius: 50%;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  /* ========== 章节通用样式 ========== */
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    border: 1px solid #eeeef0;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #e8eaf6;
+  }
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, #1a237e, #3949ab);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .subsection-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #283593;
+    margin: 22px 0 14px;
+    padding-left: 14px;
+    border-left: 3px solid #42a5f5;
+  }
+
+  /* ========== 表格样式 ========== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  thead th {
+    background: linear-gradient(180deg, #e8eaf6, #c5cae9);
+    color: #1a237e;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  thead th:first-child { border-radius: 8px 0 0 0; }
+  thead th:last-child { border-radius: 0 8px 0 0; }
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+  }
+  tbody tr:hover { background: #f8f9ff; }
+  tbody tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+  tbody tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+  .broker-name {
+    font-weight: 700;
+    color: #1a237e;
+    white-space: nowrap;
+  }
+  .tag-bullish {
+    display: inline-block;
+    background: #ffebee;
+    color: #c62828;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .tag-bearish {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .highlight-num {
+    color: #d32f2f;
+    font-weight: 700;
+  }
+  .positive { color: #c62828; font-weight: 600; }
+  .negative { color: #2e7d32; font-weight: 600; }
+  .neutral { color: #ef6c00; font-weight: 600; }
+
+  /* ========== 共识/分歧 卡片网格 ========== */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin: 18px 0;
+  }
+  .consensus-card {
+    background: linear-gradient(145deg, #e8f5e9, #f1f8e9);
+    border: 1px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 22px 24px;
+    transition: transform 0.2s;
+  }
+  .consensus-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76,175,80,0.12); }
+  .consensus-card h4 {
+    color: #2e7d32;
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .consensus-card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 13.5px;
+    color: #37474f;
+  }
+  .consensus-card li {
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .consensus-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #43a047;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .divergence-card {
+    background: linear-gradient(145deg, #fff3e0, #fbe9e7);
+    border: 1px solid #ffccbc;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 18px 0;
+  }
+  .divergence-card h4 {
+    color: #e65100;
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .compare-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .col-bullish {
+    background: #fce4ec;
+    border-radius: 10px;
+    padding: 16px 18px;
+    border: 1px solid #f8bbd0;
+  }
+  .col-bearish {
+    background: #e3f2fd;
+    border-radius: 10px;
+    padding: 16px 18px;
+    border: 1px solid #bbdefb;
+  }
+  .col-label {
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .col-label.bull { color: #c62828; }
+  .col-label.bear { color: #1565c0; }
+  .col-ul {
+    list-style: none;
+    padding: 0;
+    font-size: 13px;
+  }
+  .col-ul li {
+    padding: 4px 0 4px 16px;
+    position: relative;
+    color: #455a64;
+  }
+  .col-bullish .col-ul li::before { content: '▲'; position:absolute; left:0; color:#c62828; font-size:9px; top:7px; }
+  .col-bearish .col-ul li::before { content: '▼'; position:absolute; left:0; color:#1565c0; font-size:9px; top:7px; }
+
+  /* ========== 投资策略金字塔 ========== */
+  .strategy-pyramid {
+    margin: 24px 0;
+    padding: 20px;
+    background: linear-gradient(180deg, #fafbff 0%, #f0f2f8 100%);
+    border-radius: 14px;
+    border: 1px solid #dde1e9;
+  }
+  .pyramid-level {
+    margin-bottom: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  .pyramid-level:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .pyramid-header {
+    padding: 13px 20px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .pyramid-stars { font-size: 13px; opacity: 0.85; letter-spacing: 1px; }
+  .pyramid-body {
+    background: #fff;
+    padding: 14px 20px;
+    border-top: none;
+    font-size: 13.5px;
+    color: #455a64;
+    line-height: 1.8;
+  }
+  .pyramid-body strong { color: #1a237e; }
+  .pyramid-body ul {
+    list-style: none; padding: 0; margin-top: 6px;
+  }
+  .pyramid-body li {
+    padding: 3px 0 3px 16px;
+    position: relative;
+  }
+  .pyramid-body li::before {
+    content: '·';
+    position: absolute;
+    left: 4px;
+    color: #42a5f5;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .lvl-5 { background: linear-gradient(90deg, #1a237e, #303f9f); }
+  .lvl-4 { background: linear-gradient(90deg, #283593, #3949ab); width: 82%; }
+  .lvl-3 { background: linear-gradient(90deg, #4527a0, #5e35b1); width: 65%; }
+  .lvl-2 { background: linear-gradient(90deg, #546e7a, #607d8b); width: 48%; }
+
+  /* ========== 风险提示 ========== */
+  .risk-box {
+    background: linear-gradient(135deg, #fffde7, #fff9c4);
+    border: 2px dashed #fbc02d;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .risk-box h4 {
+    color: #f57f17;
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .risk-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .risk-box li {
+    padding: 5px 0 5px 24px;
+    position: relative;
+    font-size: 13.5px;
+    color: #5d4037;
+  }
+  .risk-box li::before {
+    content: '⛔';
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+  }
+
+  /* ========== 总结区 ========== */
+  .summary-section {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+    border-radius: 16px;
+    padding: 36px;
+    color: #fff;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .summary-quote {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    color: #ffd54f;
+  }
+  .summary-sub {
+    margin-top: 16px;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 1.8;
+  }
+
+  /* ========== 来源标注 ========== */
+  .sources {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 28px;
+    font-size: 12.5px;
+    color: #78909c;
+    line-height: 2;
+  }
+  .sources strong { color: #546e7a; }
+
+  /* ========== 公司对比小卡片 ========== */
+  .company-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 18px 0;
+  }
+  .company-card {
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s;
+  }
+  .company-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  .company-card.top { background: linear-gradient(180deg,#e8eaf6,#c5cae9); border-color:#9fa8da; }
+  .company-card.mid { background: linear-gradient(180deg,#e0f2f1,#b2dfdb); border-color:#80cbc4; }
+  .company-card.risk { background: linear-gradient(180deg,#fff3e0,#ffe0b2); border-color:#ffcc80; }
+  .cc-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .top .cc-name { color: #1a237e; }
+  .mid .cc-name { color: #00695c; }
+  .risk .cc-name { color: #e65100; }
+  .cc-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .top .cc-badge { background: #1a237e; color: #fff; }
+  .mid .cc-badge { background: #00796b; color: #fff; }
+  .risk .cc-badge { background: #ef6c00; color: #fff; }
+  .cc-data {
+    font-size: 12.5px;
+    color: #455a64;
+    line-height: 1.9;
+  }
+  .cc-data b { color: #1a237e; }
+  .cc-points {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  .cc-points li {
+    padding: 3px 0 3px 14px;
+    position: relative;
+  }
+  .top .cc-points li::before { content:'★'; position:absolute;left:0;color:#3949ab;font-size:10px; }
+  .mid .cc-points li::before { content:'◆'; position:absolute;left:0;color:#00897b;font-size:8px;top:5px; }
+  .risk .cc-points li::before { content:'!'; position:absolute;left:0;color:#e65100;font-weight:700; }
+
+  /* ========== 能力排序表 ========== */
+  .rank-table tbody td:nth-child(2) {
+    font-weight: 600;
+  }
+  .star-rank { color: #f57c00; letter-spacing: 2px; font-size: 13px; }
+
+  /* ========== 时间线 ========== */
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .time-item {
+    flex: 1;
+    min-width: 140px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    border-left: 4px solid #42a5f5;
+    transition: all 0.2s;
+  }
+  .time-item:hover { background: #e8eaf6; }
+  .time-period {
+    font-weight: 700;
+    color: #1a237e;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .time-action {
+    font-size: 12.5px;
+    color: #546e7a;
+    line-height: 1.7;
+  }
+
+  /* ========== 三大主线图示 ========== */
+  .mainline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 18px 0;
+  }
+  .mainline-card {
+    border-radius: 12px;
+    padding: 22px 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .mainline-card:hover { transform: translateY(-3px); }
+  .ml-1 { background: linear-gradient(180deg,#e8eaf6,#c5cae9); border-color: #7986cb; }
+  .ml-2 { background: linear-gradient(180deg,#e0f2f1,#b2dfdb); border-color: #4db6ac; }
+  .ml-3 { background: linear-gradient(180deg,#fff8e1,#ffecb3); border-color: #ffd54f; }
+  .ml-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .ml-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .ml-1 .ml-title { color: #1a237e; }
+  .ml-2 .ml-title { color: #00695c; }
+  .ml-3 .ml-title { color: #e65100; }
+  .ml-stock {
+    display: inline-block;
+    background: rgba(0,0,0,0.08);
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .ml-desc {
+    font-size: 12px;
+    color: #546e7a;
+    line-height: 1.7;
+    text-align: left;
+  }
+  .ml-brokers {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #90a4ae;
+  }
+
+  /* ========== 响应式 ========== */
+  @media (max-width: 768px) {
+    .container { padding: 16px 12px 40px; }
+    .section { padding: 20px 18px; }
+    .comparecols { grid-template-columns: 1fr; }
+    .company-row { grid-template-columns: 1fr; }
+    .mainline-grid { grid-template-columns: 1fr; }
+    .timeline { flex-direction: column; }
+    .report-meta { flex-direction: column; gap: 8px; }
+    table { font-size: 12px; }
+    .pyramid-level { width: 100% !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== 任务说明横幅 ==================== -->
+<div class="task-banner">
+  <div class="task-banner-inner">
+    <div class="task-label">📋 研究任务</div>
+    <div class="task-text">
+      <strong>任务：</strong>针对光模块领域的投资机会，帮我整理近一周各家券商研究所的观点，分析市场有哪些共识和分歧，后续是否值得投资、怎么投？
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 报告头 ==================== -->
+<div class="report-header">
+  <div class="report-title-icon"></div>
+  <h1 class="report-title">光模块领域投资机会深度研究报告</h1>
+  <div class="report-meta">
+    <span><span class="meta-dot"></span>报告日期：2026年4月27日</span>
+    <span><span class="meta-dot"></span>数据截至：2026年4月26日</span>
+    <span><span class="meta-dot"></span>信息来源：10家券商研究所 + OFC 2026 + 一季报数据</span>
+  </div>
+</div>
+
+<!-- ==================== 主内容 ==================== -->
+<div class="container">
+
+<!-- ====== 一、核心结论（置顶）====== -->
+<div class="conclusion-card">
+  <div class="section-tag">📌 核心结论 — 先行摘要</div>
+  <div class="conclusion-main">
+    <strong style="font-size:18px;">行业高景气确认，但投资逻辑已从"普涨"切换到"分化选股"</strong>
+    <ul class="conclusion-list">
+      <li data-num="1"><strong>行业层面：</strong>2026年是光模块"高速商业化元年"，800G规模化部署 + 1.6T商用放量，全球数通光模块市场规模有望达<span class="highlight-num">228亿美元</span></li>
+      <li data-num="2"><strong>共识面：</strong>几乎所有券商一致看好中长期前景，龙头地位稳固，国产厂商全球份额持续提升</li>
+      <li data-num="3"><strong>分歧面：</strong>短期估值回调风险 vs 业绩兑现做多逻辑；可插拔 vs CPO路径之争；个股1.6T能力分化带来Alpha差异</li>
+      <li data-num="4"><strong>投资建议：</strong><strong style="color:#ffd54f;">优选龙头、控制仓位、逢低布局</strong>。首选中际旭创，关注天孚通信，谨慎对待新易盛</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ====== 二、券商观点全景 ====== -->
+<div class="section">
+  <h2 class="section-title"><span class="section-num">二</span>近一周券商观点全景梳理</h2>
+  
+  <h3 class="subsection-title">2.1 各券商核心观点汇总</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>券商</th>
+        <th>分析师团队</th>
+        <th>核心观点</th>
+        <th>关注方向 / 标的</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="broker-name">高盛</td>
+        <td>—</td>
+        <td>目标价从791元大幅上调至<span class="positive">1187元</span>，维持买入；一季报净利大增<span class="positive">262%</span>验证盈利能力</td>
+        <td><span class="tag-bullish">中际旭创</span></td>
+      </tr>
+      <tr>
+        <td class="broker-name">美银证券</td>
+        <td>亚太科技硬件<br>(4/20电话会)</td>
+        <td>需求至2030年保持稳健；龙头地位稳固；800G需求<span class="highlight-num">5000-6000万只</span>，1.6T约<span class="highlight-num">3000万只</span>；可插拔仍是主流至2030年</td>
+        <td>中际旭创、新易盛、Coherent</td>
+      </tr>
+      <tr>
+        <td class="broker-name">中信建投</td>
+        <td>阎贵成团队</td>
+        <td>2026年全球市场<span class="highlight-num">228亿美元</span>，2030年达<span class="highlight-num">414亿美元</span>（CAGR <span class="positive">20%</span>）；800G+1.6T合计占市场<span class="positive">64%</span></td>
+        <td>数通光模块行业整体</td>
+      </tr>
+      <tr>
+        <td class="broker-name">国盛证券</td>
+        <td>宋嘉吉团队</td>
+        <td>量价齐升 + 规模效应 → 头部企业盈利水平跃升全新台阶</td>
+        <td><span class="tag-bullish">高速光模块龙头</span></td>
+      </tr>
+      <tr>
+        <td class="broker-name">中金公司</td>
+        <td>郭威秀团队</td>
+        <td>全球前十大厂商中国产占<span class="positive">6家</span>，份额提升空间巨大</td>
+        <td>国产光模块厂商</td>
+      </tr>
+      <tr>
+        <td class="broker-name">国金证券</td>
+        <td>刘高畅团队</td>
+        <td>驳斥"CPO替代论"，未来两年<strong>互补而非替代</strong>；800G/1.6T可插拔仍将主导市场</td>
+        <td>光模块长期前景</td>
+      </tr>
+      <tr>
+        <td class="broker-name">东吴证券</td>
+        <td>欧子兴团队</td>
+        <td>三大主线："大光"（龙头）、"小光"（二线突破）、上游（光芯片稀缺资源）</td>
+        <td>中际旭创、源杰科技</td>
+      </tr>
+      <tr>
+        <td class="broker-name">方正证券</td>
+        <td>赵璐</td>
+        <td>光模块自动化组装设备进入<strong>"放量元年"</strong></td>
+        <td>自动化设备"卖铲人"</td>
+      </tr>
+      <tr>
+        <td class="broker-name">东方证券</td>
+        <td>薛宏伟</td>
+        <td>建议重点关注测试和耦合设备等<strong>高壁垒环节</strong></td>
+        <td>测试/耦合设备商</td>
+      </tr>
+      <tr>
+        <td class="broker-name">爱建证券</td>
+        <td>王凯</td>
+        <td>行业由需求驱动转向<strong>供给约束主导</strong>；InP器件扩产瓶颈明显</td>
+        <td>光器件/InP供应链</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">2.2 关键量化预测对比</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>指标</th>
+        <th>Lightcounting<br>(中信建投引用)</th>
+        <th>美银证券专家预测</th>
+        <th>市场共识区间</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2026年全球数通光模块市场规模</strong></td>
+        <td>228亿美元</td>
+        <td>—</td>
+        <td>约 200~230 亿美元</td>
+      </tr>
+      <tr>
+        <td><strong>2026年 800G 需求量</strong></td>
+        <td>4500万只</td>
+        <td class="highlight-num">5000~6000 万只</td>
+        <td>~5000万只级别</td>
+      </tr>
+      <tr>
+        <td><strong>2026年 1.6T 需求量</strong></td>
+        <td>2000万只<br>(同比+<span class="positive">600%</span>)</td>
+        <td class="highlight-num">~3000 万只</td>
+        <td>2000~3000万只</td>
+      </tr>
+      <tr>
+        <td><strong>2030年市场规模</strong></td>
+        <td>414亿美元</td>
+        <td>需求稳健至2030年</td>
+        <td>400亿+美元</td>
+      </tr>
+      <tr>
+        <td><strong>2026年 800G 硅光渗透率</strong></td>
+        <td>—</td>
+        <td class="highlight-num">50%</td>
+        <td>约 50%</td>
+      </tr>
+      <tr>
+        <td><strong>2026年 1.6T 硅光渗透率</strong></td>
+        <td>—</td>
+        <td class="highlight-num">60%</td>
+        <td>约 60%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ====== 三、市场共识分析 ====== -->
+<div class="section">
+  <h2 class="section-title"><span class="section-num">三</span>市场共识分析</h2>
+  
+  <h3 class="subsection-title">3.1 四大强共识</h3>
+  <div class="card-grid">
+    <div class="consensus-card">
+      <h4>🚀 共识一：超级景气周期确认</h4>
+      <ul>
+        <li>800G 进入全面规模部署阶段</li>
+        <li>1.6T 开启商用元年，采购预期从 700万只 → <strong>2000万只</strong></li>
+        <li>Lightcounting：1.6T 需求同比+<strong>600%</strong></li>
+      </ul>
+    </div>
+    <div class="consensus-card">
+      <h4>🏆 共识二：国产地位不可逆转</h4>
+      <ul>
+        <li>全球前十占<strong>6席</strong></li>
+        <li>中际旭创 800G 市占率 <strong>38~40%（第一）</strong></li>
+        <li>天孚通信英伟达供应链 <strong>65~70%（近乎垄断）</strong></li>
+      </ul>
+    </div>
+    <div class="consensus-card">
+      <h4>⚡ 共识三：AI算力是唯一驱动力</h4>
+      <ul>
+        <li>大模型 → 算力集群 → 光互联升级，链条清晰</li>
+        <li>CPO/LPO/NPO 是增量而非替代</li>
+        <li>国金证券明确驳斥替代论</li>
+      </ul>
+    </div>
+    <div class="consensus-card">
+      <h4>🎯 共识四：头部集中度持续提升</h4>
+      <ul>
+        <li>云厂商限制供应商 <strong>3~4 家</strong></li>
+        <li>一线供应商占 <strong>50%+</strong> 份额</li>
+        <li>技术壁垒构成护城河</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="subsection-title">3.2 券商一致看好的三大投资主线</h3>
+  <div class="mainline-grid">
+    <div class="mainline-card ml-1">
+      <div class="ml-icon">💎</div>
+      <div class="ml-title">主线一："大光"<br>整机龙头</div>
+      <div class="ml-stock">★★★★★ 中际旭创</div>
+      <div class="ml-desc">需求确定性最强 + 供应链话语权最大 + 1.6T技术领先</div>
+      <div class="ml-brokers">支持：高盛 · 国盛 · 中信建投 · 中金 · 东吴</div>
+    </div>
+    <div class="mainline-card ml-2">
+      <div class="ml-icon">⚙️</div>
+      <div class="ml-title">主线二：上游<br>核心元器件</div>
+      <div class="ml-stock">★★★★ 源杰科技 / 天孚通信</div>
+      <div class="ml-desc">供给约束 + 技术稀缺性 + 国产替代加速</div>
+      <div class="ml-brokers">支持：东吴 · 爱建 · 东方</div>
+    </div>
+    <div class="mainline-card ml-3">
+      <div class="ml-icon">🔧</div>
+      <div class="ml-title">主线三：<br>自动化 / 测试设备</div>
+      <div class="ml-stock">★★★ 腾景科技 / 杰普特等</div>
+      <div class="ml-desc">生产模式变革 + 高壁垒 + 放量元年</div>
+      <div class="ml-brokers">支持：方正 · 东方</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 四、市场分歧深度剖析 ====== -->
+<div class="section">
+  <h2 class="section-title"><span class="section-num">四</span>市场分歧深度剖析</h2>
+  
+  <h3 class="subsection-title">分歧一：当前估值是否已充分反映预期？</h3>
+  <div class="divergence-card">
+    <h4>⚖️ 多空对决</h4>
+    <div class="compare-cols">
+      <div class="col-bullish">
+        <div class="col-label bull">▲ 多方（看好继续涨）</div>
+        <ul class="col-ul">
+          <li>高盛目标价1187元，上行空间仍存</li>
+          <li>中际Q1净利环比<span class="positive">+56%</span>，业绩加速兑现</li>
+          <li>1.6T占比 Q2 起显著提升</li>
+          <li>北向资金仍在加仓</li>
+          <li>OFC后订单能见度进一步提升</li>
+        </ul>
+      </div>
+      <div class="col-bearish">
+        <div class="col-label bear">▼ 空方（担心回调）</div>
+        <ul class="col-ul">
+          <li>新易盛一年涨7倍，"Priced to perfection"</li>
+          <li>新易盛Q1净利环比<span class="negative">-13.25%</span>，九季度首跌</li>
+          <li>汇兑损失<span class="negative">5.22亿</span>侵蚀利润</li>
+          <li>宽基ETF减仓，机构获利了结压力</li>
+          <li>存货及预付款大增，营运资金承压</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:14px;padding:10px 16px;background:rgba(230,81,0,0.06);border-radius:8px;font-size:13.5px;color:#e65100;">
+      <strong>判断：</strong>板块内部分化加剧。"易中天"齐涨共跌时代结束 —— 中际凭借1.6T绝对优势仍获青睐，新易盛因爬坡期不确定性遭遇质疑。
+    </p>
+  </div>
+
+  <h3 class="subsection-title">分歧二：可插拔模块 vs CPO，谁主沉浮？</h3>
+  <table>
+    <thead>
+      <tr><th>维度</th><th>可插拔光模块（Pluggable）</th><th>CPO 共封装光学</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>成熟度</strong></td><td>已大规模商用 ✅</td><td>2026Q3 量产（天孚通信时间表）</td></tr>
+      <tr><td><strong>美银证券判断</strong></td><td class="positive">主流形态持续至2030年</td><td>2027年 NPO/XPO 才量产</td></tr>
+      <tr><td><strong>渗透节奏</strong></td><td>800G/1.6T 当下绝对主流</td><td>中长期增量，非替代</td></tr>
+      <tr><td><strong>国金证券立场</strong></td><td class="positive">驳斥悲观论，两年内互补</td><td>是增量不是威胁</td></tr>
+      <tr><td><strong>适用场景</strong></td><td>通用数据中心</td><td>超大规模AI集群（10万卡+）</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:12px;padding:10px 16px;background:rgba(46,125,50,0.05);border-radius:8px;font-size:13.5px;color:#2e7d32;">
+    <strong>判断：</strong>短期无需过度担忧CPO替代风险。可插拔模块至少未来3-4年内仍是绝对主力。
+  </p>
+
+  <h3 class="subsection-title">分歧三：个股间的"能力断层"—— 1.6T竞争力排序重塑</h3>
+  <table class="rank-table">
+    <thead>
+      <tr><th>公司</th><th>1.6T 能力</th><th>硅光良率</th><th>芯片自给</th><th>核心风险</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="broker-name">中际旭创</td>
+        <td class="star-rank">★★★★★</td>
+        <td class="positive">95%+ （领先后行15-20pct）</td>
+        <td><span class="neutral">40%</span></td>
+        <td>估值已不便宜</td>
+      </tr>
+      <tr>
+        <td class="broker-name">新易盛</td>
+        <td class="star-rank">★★★☆☆</td>
+        <td>提升中</td>
+        <td>较低（依赖博通）</td>
+        <td class="negative">1.6T 掉队风险</td>
+      </tr>
+      <tr>
+        <td class="broker-name">天孚通信</td>
+        <td class="star-rank">★★★★☆</td>
+        <td>N/A（代工）</td>
+        <td>N/A</td>
+        <td>不做整机，弹性有限</td>
+      </tr>
+      <tr>
+        <td class="broker-name">华工科技</td>
+        <td class="star-rank">★★★★☆</td>
+        <td class="positive">99.8%+ (光引擎)</td>
+        <td>—</td>
+        <td>市场认知度待提升</td>
+      </tr>
+      <tr>
+        <td class="broker-name">光迅科技</td>
+        <td class="star-rank">★★★☆☆</td>
+        <td>3.2T 有布局</td>
+        <td>—</td>
+        <td>竞争力相对偏弱</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="text-align:center;margin-top:12px;font-size:14px;color:#1a237e;font-weight:600;">
+    🏆 OFC 后受益排序：中际旭创 &gt; 华工科技 &gt; 新易盛 &gt; 光迅科技 &gt; 天孚通信
+  </p>
+</div>
+
+<!-- ====== 五、重点公司对比 ====== -->
+<div class="section">
+  <h2 class="section-title"><span class="section-num">五</span>重点公司深度对比</h2>
+  
+  <h3 class="subsection-title">5.1 "易中天"三巨头一季报关键数据</h3>
+  <table>
+    <thead>
+      <tr><th>指标</th><th>中际旭创</th><th>新易盛</th><th>天孚通信</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Q1 营收增速</strong></td><td>强劲（待披露完整数据）</td><td>同比翻倍（83.38亿元）</td><td>一季度上涨近 50%</td></tr>
+      <tr><td><strong>Q1 净利环比</strong></td><td class="positive">+56.45% ✅</td><td class="negative">-13.25% ❌</td><td>正增长</td></tr>
+      <tr><td><strong>1.6T 进展</strong></td><td>订单排至年底，占比超40%</td><td>Q2起量，Q3-Q4明显爬坡</td><td>光引擎订单至 2027Q1</td></tr>
+      <tr><td><strong>近期股价表现</strong></td><td>相对坚挺（微跌1.12%）</td><td>大跌 11.67%</td><td>跟随调整 7.49%</td></tr>
+      <tr><td><strong>海外收入占比</strong></td><td>高</td><td class="negative">96%（汇损敏感）</td><td>较高</td></tr>
+      <tr><td><strong>高盛目标价</strong></td><td class="highlight-num">1187 元</td><td class="highlight-num">518 元</td><td>未明确</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">5.2 三巨头核心竞争力画像</h3>
+  <div class="company-row">
+    <div class="company-card top">
+      <div class="cc-name">中际旭创</div>
+      <div class="cc-badge">行业锚定资产 ★★★★★</div>
+      <div class="cc-data">
+        <p><b>800G 全球第一（38~40%）</b></p>
+        <p><b>1.6T 硅光良率 95%+ 领先同行</b></p>
+        <p>英伟达 CPO/NPO 占比 70~80%</p>
+        <p>展示 6.4T NPO + 12.8T XPO 液冷模块</p>
+      </div>
+      <ul class="cc-points">
+        <li>技术代差明显</li>
+        <li>客户绑定极深</li>
+        <li>住友1500万颗芯片产能锁定</li>
+      </ul>
+    </div>
+    <div class="company-card risk">
+      <div class="cc-name">新易盛</div>
+      <div class="cc-badge">高赔率但高风险 ⚠️</div>
+      <div class="cc-data">
+        <p>全球首发 6.4T NPO + 12.8T XPO</p>
+        <p>1.6T 订单规模最大（<b>210亿+</b>）</p>
+        <p>与博通关系密切（优先供货保障）</p>
+      </div>
+      <ul class="cc-points">
+        <li>1.6T 爬坡期不确定性大</li>
+        <li>800G 价格战压力</li>
+        <li>汇率敞口大（海外96%）</li>
+      </ul>
+    </div>
+    <div class="company-card mid">
+      <div class="cc-name">天孚通信</div>
+      <div class="cc-badge">隐形冠军 ★★★★</div>
+      <div class="cc-data">
+        <p>1.6T 光引擎市占率 <b>65%+</b></p>
+        <p>英伟达 Mellanox 方案近乎独家</p>
+        <p>在手订单 <b>75亿+</b>（排至 2027Q1）</p>
+        <p>毛利率稳定在 <b>40%+</b></p>
+      </div>
+      <ul class="cc-points">
+        <li>2026Q3 CPO 量产催化</li>
+        <li>6月光模块开始出货</li>
+        <li>确定性极强但弹性有限</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 六、投资建议 ====== -->
+<div class="section">
+  <h2 class="section-title"><span class="section-num">六</span>投资建议</h2>
+  
+  <h3 class="subsection-title">6.1 是否值得投？</h3>
+  <p style="padding:14px 20px;background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border-radius:10px;border:1px solid#a5d6a7;font-size:15px;margin-bottom:20px;">
+    <strong style="color:#2e7d32;font-size:17px;">✅ 值得投，但需要讲究策略</strong>
+  </p>
+  <div class="compare-cols" style="margin-bottom:20px;">
+    <div class="col-bullish">
+      <div class="col-label bull">📈 支撑做多的核心理由</div>
+      <ul class="col-ul">
+        <li>800G/1.6T 放量有量化支撑（非概念炒作）</li>
+        <li>龙头格局清晰，国产全球竞争力经证实</li>
+        <li>每1-2年代升级，ASP持续提升</li>
+        <li>产业链不断扩展：光模块→光引擎→CPO→设备</li>
+      </ul>
+    </div>
+    <div class="col-bearish">
+      <div class="col-label bear">⚠️ 需要警惕的风险</div>
+      <ul class="col-ul">
+        <li><strong>估值风险：</strong>一年8倍涨幅，业绩瑕疵被放大</li>
+        <li><strong>汇率风险：</strong>海外收入90%+，汇率直接冲击利润</li>
+        <li><strong>地缘政治：</strong>美国政策变化影响北美云厂订单</li>
+        <li><strong>价格战：</strong>800G主流化后均价下行压力大</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="subsection-title">6.2 怎么投？—— 分层次策略金字塔</h3>
+  <div class="strategy-pyramid">
+    <div class="pyramid-level lvl-5">
+      <div class="pyramid-header">
+        <span>★★★★★ 底仓（40%~50%）</span>
+        <span class="pyramid-stars">确定性最高</span>
+      </div>
+      <div class="pyramid-body">
+        <strong>中际旭创 —— 行业锚定</strong>
+        <ul>
+          <li>1.6T 绝对优势 + 良率护城河（95%+）</li>
+          <li>建议回调至 <strong>850~900 元</strong> 区间分批建仓</li>
+          <li>目标区间：<strong>1100~1200 元</strong>（参考高盛目标价1187元）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pyramid-level lvl-4">
+      <div class="pyramid-header">
+        <span>★★★★ 配置仓位（30%）</span>
+        <span class="pyramid-stars">波动更小</span>
+      </div>
+      <div class="pyramid-body">
+        <strong>天孚通信 —— 上游稀缺</strong>
+        <ul>
+          <li>英伟达光引擎垄断地位（市占率65%+）</li>
+          <li>CPO 量产催化值得期待（2026Q3）</li>
+          <li>适合追求确定性的投资者</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pyramid-level lvl-3">
+      <div class="pyramid-header">
+        <span>★★★ 博弈 / 卫星仓位（0~20%）</span>
+        <span class="pyramid-stars">需耐心等待</span>
+      </div>
+      <div class="pyramid-body">
+        <strong>新易盛 —— 高赔率但高风险</strong>
+        <ul>
+          <li>1.6T 爬坡期不确定性较大</li>
+          <li>建议 <strong>520~550 元以下</strong>考虑，设好止损</li>
+          <li>Q2/Q3 是验证窗口期（1.6T量产出货）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pyramid-level lvl-2">
+      <div class="pyramid-header">
+        <span>★★ 主题关注（不急于重仓）</span>
+        <span class="pyramid-stars">中长期布局</span>
+      </div>
+      <div class="pyramid-body">
+        <strong>源杰科技（光芯片）/ 华工科技（3.2T）</strong>
+        <ul>
+          <li>上游稀缺资源 + 新技术储备</li>
+          <li>适合有耐心的中长期投资者</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="subsection-title">6.3 操作节奏建议</h3>
+  <div class="timeline">
+    <div class="time-item">
+      <div class="time-period">📍 当下（4月底~5月）</div>
+      <div class="time-action">等待一季报消化完毕，利用回调机会分批建仓中际旭创</div>
+    </div>
+    <div class="time-item">
+      <div class="time-period">📊 Q2（6月~7月）</div>
+      <div class="time-action">关注新易盛1.6T量产出货数据，验证其爬坡进度</div>
+    </div>
+    <div class="time-item">
+      <div class="time-period">🔥 Q3（8月~9月）</div>
+      <div class="time-action">1.6T需求旺季来临，板块或有新一轮催化</div>
+    </div>
+    <div class="time-item">
+      <div class="time-period">🔭 Q4（10月~12月）</div>
+      <div class="time-action">关注2027年指引、3.2T进展、CPO量产信号</div>
+    </div>
+  </div>
+
+  <div class="risk-box">
+    <h4>🛡️ 风险控制红线</h4>
+    <ul>
+      <li>单票仓位不超过总资产的 <strong>20%</strong></li>
+      <li>光模块板块总仓位不超过 <strong>40%</strong></li>
+      <li>设置 <strong>15% 止损线</strong>（尤其对新易盛这类博弈型持仓）</li>
+      <li>密切跟踪每周北向资金流向和公募持仓变动</li>
+      <li>关注人民币汇率走势（直接影响利润）</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ====== 七、总结 ====== -->
+<div class="summary-section">
+  <div class="summary-quote">
+    "行业依然黄金，但淘金需要更精细的筛子。"
+  </div>
+  <div class="summary-sub">
+    光模块赛道的<strong>长逻辑没有变</strong>—— AI算力爆发 → 高速光互联需求 → 国产厂商全球崛起。<br>
+    但<strong>短逻辑已经变了</strong>—— 从"买赛道"到"选个股"，从"看增速"到"看质量"。
+  </div>
+</div>
+
+<!-- ========== 来源 ========== -->
+<div class="sources">
+  <strong>📚 主要信息来源：</strong><br>
+  1. 21世纪经济报道《光模块再爆发！券商热议三大主线》（2026.04.17）
+  · 2. 腾讯新闻《新易盛VS中际旭创：光模块巨头开始分化》（2026.04.26）
+  · 3. 新浪财经《OFC释放信息:2026年光模块龙头谁最受益?》（2026.03.27）
+  · 4. 新浪财经《美银证券指光模块龙头地位稳固》（基于4.20专家电话会纪要，2026.04.24）
+  · 5. 证券日报《CPO板块"光"速狂飙背后的三大逻辑》（2026.04.13）
+  · 6. 高盛/中信建投/国盛/中金/国金/东吴/方正/东方/爱建证券公开研报及路演纪要
+  <br><br>
+  <em style="color:#bdbdbd;">⚠️ 免责声明：本报告基于公开信息整理，不构成任何投资建议。市场有风险，投资需谨慎。</em>
+</div>
+
+</div><!-- end container -->
+
+</body>
+</html>
